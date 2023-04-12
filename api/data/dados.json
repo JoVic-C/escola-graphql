@@ -43,57 +43,52 @@
       "role": 2
     },
     {
-      "id": 7,
-      "nome": "João",
-      "ativo": false,
-      "email": "j@j.com",
-      "role": 1
-    },
-    {
-      "id": 8,
-      "nome": "Claudiaaa",
-      "ativo": false,
-      "email": "c@c1.com",
-      "role": 1
-    },
-    {
-      "nome": "joao",
+      "nome": "Marina Souza",
       "ativo": true,
-      "email": "j@j.com",
+      "email": "l@l.com.br",
       "role": 2,
+      "createdAt": "2020-09-22T00:00:00.000Z",
+      "id": 7
+    },
+    {
+      "nome": "Marina Souza",
+      "ativo": true,
+      "email": "l@l.com.br",
+      "role": 2,
+      "createdAt": "2020-09-22T00:00:00.000Z",
+      "id": 8
+    },
+    {
+      "nome": "Ricardo Chaves",
+      "ativo": false,
+      "email": "s@s.com.br",
+      "role": 2,
+      "createdAt": "2020-09-22T00:00:00.000Z",
       "id": 9
     },
     {
-      "nome": "julia",
+      "nome": "Marcos Gomes",
       "ativo": true,
-      "email": "ju@ju.com",
-      "role": 2,
-      "createAt": "2020-09-22T00:00:00.000Z",
+      "email": "m@m.com",
+      "role": 1,
+      "createdAt": "2020-08-01T00:00:00.000Z",
       "id": 10
     },
     {
-      "nome": "julia",
+      "nome": "Aline Ferreira",
       "ativo": true,
-      "email": "ju@ju.com",
-      "role": 2,
-      "createAt": "2020-09-22T00:00:00.000Z",
+      "email": "a@a.com",
+      "role": 1,
+      "createdAt": "2020-08-01T00:00:00.000Z",
       "id": 11
     },
     {
-      "nome": "MARTA",
+      "nome": "Julia Campos",
       "ativo": true,
-      "email": "jaau@ju.com",
-      "role": 2,
-      "createAt": "2020-09-22T00:00:00.000Z",
+      "email": "j@j.com",
+      "role": 1,
+      "createdAt": "2020-08-01T00:00:00.000Z",
       "id": 12
-    },
-    {
-      "nome": "MARTinha",
-      "ativo": true,
-      "email": "jaau@ju.com",
-      "role": 2,
-      "createAt": "2020-09-22T00:00:00.000Z",
-      "id": 13
     }
   ],
   "roles": [

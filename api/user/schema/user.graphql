@@ -1,47 +1,62 @@
-const { gql } = require('apollo-server');
+const { gql } = require('apollo-server')
 
 const userSchema = gql `
 scalar DateTime
 
-    type User {
-        nome: String!
-        ativo: Boolean!
-        email: String
-        role: Role!
-        createAt: DateTime
-    }
+  type User {
+    nome: String!
+    ativo: Boolean!
+    email: String
+    role: Role!
+    createdAt: DateTime
+    matriculas: [Matricula]
+  }
 
-    input UserInput {
-        nome: String
-        ativo: Boolean
-        email: String
-        role: RolesType
-        createAt: DateTime
-    }
+  input UserInput {
+    nome: String
+    ativo: Boolean
+    email: String
+    role: RolesType
+    createdAt: DateTime
+  }
 
-    type Role {
-        id: ID!
-        type: RolesType!
-    }
+  type Role {
+    id: ID!
+    type: RolesType!
+  }
 
-    enum RolesType{
-        ESTUDANTE
-        DOCENTE
-        COORDENACAO
-    }
+  enum RolesType {
+    ESTUDANTE
+    DOCENTE
+    COORDENACAO
+  }
 
-    type Query {
-        users: [User]
-        user(id: ID!): User!
-    }
+  type Query {
+    users (page: Int, limit: Int): [User]
+    user(id: ID!): User!
+  }
 
-    type Mutation {
-        adicionaUser(user: UserInput): User!
+  type Mutation {
+    adicionaUser(user: UserInput): User!
+    atualizaUser(id: ID!, user: UserInput): atualizaUserResposta!
+    deletaUser(id: ID!): deletaUserResposta!
+  }
 
-        atualizaUser(id: ID!, user: UserInput): User!
+  interface respostaCustom {
+    code: Int!
+    mensagem: String!
+  }
 
-        deletaUser(id: ID!): ID!
-    }
+  type deletaUserResposta implements respostaCustom {
+    code: Int!
+    mensagem: String!
+  }
+
+  type atualizaUserResposta implements respostaCustom {
+    code: Int!
+    mensagem: String!
+    userAtualizado: User!
+  }
 
 `
 
